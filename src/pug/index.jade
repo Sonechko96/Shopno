@@ -1,0 +1,146 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+        meta(http-equiv="X-UA-Compatible" content="ie=edge")
+        title Document
+        link(rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css")
+        link(rel="stylesheet" href="../css/app.css")
+        link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous")
+        script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous")
+    body
+        nav.navbar
+            .container
+                a.navbar__logo(href="#")
+                    img(src="../img/logo.png")
+
+                .section
+                    .menu-block
+                        nav.menu-nav
+                            a.menu-nav__link(href='#') Main
+                            a.menu-nav__link(href='#') About
+                            a.menu-nav__link(href='#') Works
+                            a.menu-nav__link(href='#') Services
+                            a.menu-nav__link(href='#') Team
+                            a.menu-nav__link(href='#') Contacts
+                    a.menu-btn(href="#")
+                        span
+
+                .navbar__title.text-center Say Hello to <span>shopno!</span> <br><span>agency</span> corporate shopno theme
+                button.navbar__button contact us
+
+        .info-block
+            .container
+                .row
+                    .col-12
+                        .info-block__title about us
+                        .info-block__description Lorem ipsum dolor sit amet event landing template
+                    .col-md-6
+                        .info-block__carousel
+                            .slide
+                                img(src="../img/foto-1.png")
+                            .slide
+                                img(src="../img/foto-1.png")
+                            .slide
+                                img(src="../img/foto-1.png")
+                            .slide
+                                img(src="../img/foto-1.png")
+                    .col-md-6
+                        .topic We Actually Do amazing works
+                        .topic-text
+                            | A visual approach is an approach to a runway at an airport
+                            | conducted under instrument flight rules. The pilot must at all times have either the airport or the preceding
+                            | aircraft in approach correct sight. conducted under instrument flight rules. The pilot must at all times.<span> Preceding aircraft in approach correct sight. conducted under instrument flight rules.</span>
+                        .topic why we are the great?
+                        .topic-text
+                            | A visual approach is an approach to a runway at an airport
+                            | conducted under instrument flight rules.
+                            | The preceding aircraft in approach correct sight.
+        .info-block.works
+            .container
+                .row
+                    .col-12
+                        .info-block__title featured works
+                        .info-block__description Lorem ipsum dolor sit amet event landing template
+                    .col-md-4.col-sm-6
+                        a(href="#")
+                            img(src="../img/banner1.png")
+                    .col-md-4.col-sm-6
+                        a(href="#")
+                            img(src="../img/banner2.png")
+                    .col-md-4.col-sm-6
+                        a(href="#")
+                            img(src="../img/banner3.png")
+                    .col-md-4.col-sm-6
+                        a(href="#")
+                            img(src="../img/banner4.png")
+                    .col-md-4.col-sm-6
+                        a(href="#")
+                            img(src="../img/banner5.png")
+                    .col-md-4.col-sm-6
+                        a(href="#")
+                            img(src="../img/banner6.png")
+        .info-block.services
+            .container
+                .row
+                    .col-12
+                        .info-block__title our services
+                        .info-block__description Lorem ipsum dolor sit amet event landing template
+
+
+                    mixin name(title, description, topic)
+                        .block(class!=attributes.mod)
+                            .block-inner
+                                .block__title= title
+                                .block__description= description
+                                .block__topic.d-none= topic
+                                .block-inner__bottom
+                                    button.close.d-none
+                                        span
+                                    button.block__button know more ➙
+
+                    .col-lg-7
+                        .mt-3
+                            +name('Designing is The CooL LOVE FOR.',
+                            'Our most popular service is our we know that sometimes it’s something and you middle most..', 'Our most popular service is our Virtual Receptionist. We know that sometimes it’s something and you middle most this job was posted less than five minutes ago, and we think it’s a good match for you. If you submit a proposal now, you’ll be one of the first candidates. You may even catch the client while they’re still online.')(mod="block_cell-1")
+                    .col-lg-5
+                        .mt-3
+                            +name('cool psd Design',
+                            'We know that sometimes it’s something and you middle most..', 'Our most popular service is our Virtual Receptionist. We know that sometimes it’s something and you middle most this job was posted less than five minutes ago, and we think it’s a good match for you. If you submit a proposal now, you’ll be one of the first candidates. You may even catch the client while they’re still online.')(mod="block_cell-2")
+                    .col-lg-7
+                        .mt-3
+                            +name('Designing is The Cool',
+                            'Our most popular service is our Virtual Receptionist. We know that ...', 'Our most popular service is our Virtual Receptionist. We know that sometimes it’s something and you middle most this job was posted less than five minutes ago, and we think it’s a good match for you. If you submit a proposal now, you’ll be one of the first candidates. You may even catch the client while they’re still online.')(mod="block_cell-3")
+                    .col-lg-5
+                        .mt-3
+                            +name('psd to html kori',
+                            'We know that sometimes it’s something and you middle most..', 'Our most popular service is our Virtual Receptionist. We know that sometimes it’s something and you middle most this job was posted less than five minutes ago, and we think it’s a good match for you. If you submit a proposal now, you’ll be one of the first candidates. You may even catch the client while they’re still online.')(mod="block_cell-4")
+                    .col-lg-5
+                        .mt-3
+                            +name('cool psd Design',
+                            'Our most popular service is our new virtual Receptionist you middle most..', 'Our most popular service is our Virtual Receptionist. We know that sometimes it’s something and you middle most this job was posted less than five minutes ago, and we think it’s a good match for you. If you submit a proposal now, you’ll be one of the first candidates. You may even catch the client while they’re still online.')(mod="block_cell-5")
+                    .col-lg-7
+                        .mt-3
+                            +name('Designing is The Cool FOR',
+                            'Our most popular service is our Virtual Receptionist. We know that sometimes it’s something and you middle most..', 'Our most popular service is our Virtual Receptionist. We know that sometimes it’s something and you middle most this job was posted less than five minutes ago, and we think it’s a good match for you. If you submit a proposal now, you’ll be one of the first candidates. You may even catch the client while they’re still online.')(mod="block_cell-6")
+
+
+
+
+                    //.col-7
+                    //    .block.block_cell-1
+                    //        .block-inner.block-inner_active
+                    //            .block__title Designing is The CooL LOVE FOR.
+                    //            .block__description Our most popular service is our Virtual Receptionist. We know that sometimes it’s something and you middle most this job was posted less than five minutes ago, and we think it’s a good match for you. If you submit a proposal now, you’ll be one of the first candidates. You may even catch the client while they’re still online.
+                    //            button.block__button.block__button_active know more ➙
+
+
+
+
+
+
+
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+        script(type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js")
+        script(src="../js/script.js")
